@@ -7,143 +7,134 @@
     <meta name="author" content="Jérémy Thomas">
     <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
     <link rel="stylesheet" href="stylesheet1.css">
-    
-     <!-- Icons Script -->
-     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <!-- Lien vers le fichier JavaScript -->
-    <script src="script.js"></script>
-    
+
+    <!-- Icons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <video autoplay muted loop>
-    <source src="video-fond.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la balise vidéo.
-  </video>
+        <source src="video-fond.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
     <header>
-        
         <h1>Mon CV et mes compétences.</h1>
-                
     </header>
 
-    <div class="navigation">
-    <ul>
-        <li class="list active" style="--clr:#f44336">
-            <a href="index.html">
-                <span class="icon">
-                    <ion-icon name="home-outline"></ion-icon>
-                </span>
-                <span class="text">Accueil</span>
-            </a>
-        </li>
-        <li class="list" style="--clr:#f44336">
-            <a href="profil.html">
-                <span class="icon">
-                    <ion-icon name="person-outline"></ion-icon>
-                </span>
-                <span class="text">Profil</span>
-            </a>
-        </li>
-        <li class="list" style="--clr:#f44336">
-            <a href="BTS SIO.html">
-                <span class="icon">
-                    <ion-icon name="school-outline"></ion-icon>
-                </span>
-                <span class="text">BTS SIO</span>
-            </a>
-        </li>
-        <li class="list" style="--clr:#f44336">
-            <a href="Epreuves.html">
-                <span class="icon">
-                    <ion-icon name="ribbon-outline"></ion-icon>
-                </span>
-                <span class="text">Epreuves</span>
-            </a>
-        </li>
-        <li class="list" style="--clr:#f44336">
-            <a href="projets.html">
-                <span class="icon">
-                    <ion-icon name="folder-open-outline"></ion-icon>
-                </span>
-                <span class="text">Projets</span>
-            </a>
-        </li>
-        <li class="list" style="--clr:#f44336">
-            <a href="veilles.html">
-                <span class="icon">
-                    <ion-icon name="fa-eye-outline"></ion-icon>
-                </span>
-                <span class="text">Veilles</span>
-            </a>
-        </li>
+    <nav class="navigation">
+        <ul>
+            <li class="list active" style="--clr:#f44336">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Accueil</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f44336">
+                <a href="profil.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">Profil</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f44336">
+                <a href="BTS%20SIO.html">
+                    <span class="icon">
+                        <ion-icon name="school-outline"></ion-icon>
+                    </span>
+                    <span class="text">BTS SIO</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f44336">
+                <a href="Epreuves.html">
+                    <span class="icon">
+                        <ion-icon name="ribbon-outline"></ion-icon>
+                    </span>
+                    <span class="text">Epreuves</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f44336">
+                <a href="projets.html">
+                    <span class="icon">
+                        <ion-icon name="folder-open-outline"></ion-icon>
+                    </span>
+                    <span class="text">Projets</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f44336">
+                <a href="veilles.html">
+                    <span class="icon">
+                        <!-- Correction de l'icône : "fa-eye-outline" n'existe pas sur Ionicons -->
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </span>
+                    <span class="text">Veilles</span>
+                </a>
+            </li>
+        </ul>
         <div class="indicator"></div>
-    </ul>
-   </div>
+    </nav>
+
     <div class="container">
-        <section id="accueil">
+        <section id="cv">
             <h2>Mon CV</h2>
             <embed src="CV.pdf" width="800" height="600" type="application/pdf">
-            
         </section>
-        <section id="compétences">
+        <section id="competences">
             <h2>Mes compétences</h2>
-            <div class="compétences">
-                <div class="SAVOIR FAIRE">
-                    <h3>SAVOIR FAIRE:</h3>
-                    
-                    <ul> 
-                      <li>Répondre aux incidents et aux demandes d’assistance et d’évolution: acquise lors de l’alternance (gestion des demandes via une application type « ticketing »).</li>
-                      <li>Travailler en mode projet: acquise en cours lors de l’élaboration du projet de salle d’apprentissage en cybersécurité et lors des business games (projet de start-up).</li>
-                      <li>Mettre à disposition des utilisateurs un service informatique: acquise lors de l’alternance (installation d’imprimantes en réseau, configuration des adresses IP, des protocoles de sécurité et de communication).</li>
-                      <li>Développer un site web: acquise en autoformation (aide sur un projet de développement d’une entité de coordination et de formation de patients-partenaires, cogérée par l’UBO et le CHU) puis en cours pour le portfolio et lors des business games (HTML, CSS,Wordpress, Jimdo, Joomla).</li>
-                      <li>Logiciels : Word, Excel, Powerpoint, Cisco Packet Tracer, Oracle Virtual Box, Wampserver, VPN(Barracuda).</li>
-                      <li>OS : Kali Linux, Ubuntu, Microsoft.</li>
-                      <li>Compétences hors informatique: comptabilité, prévention en sécurité incendie, sécurité au travail, conseil dans le domaine du nucléaire, audit qualité, techniques de laboratoire, rédaction de dossiers techniques, veille réglementaire et normative.</li>
+            <div class="competences">
+                <div class="savoir-faire">
+                    <h3>Savoir-faire</h3>
+                    <ul>
+                        <li>Répondre aux incidents et aux demandes d’assistance et d’évolution : acquis lors de l’alternance (gestion des demandes via une application type « ticketing »).</li>
+                        <li>Travailler en mode projet : acquis en cours lors de l’élaboration du projet de salle d’apprentissage en cybersécurité et lors des business games (projet de start-up).</li>
+                        <li>Mettre à disposition des utilisateurs un service informatique : acquis lors de l’alternance (installation d’imprimantes en réseau, configuration des adresses IP, des protocoles de sécurité et de communication).</li>
+                        <li>Développer un site web : acquis en autoformation (aide sur un projet de développement d’une entité de coordination et de formation de patients-partenaires, cogérée par l’UBO et le CHU) puis en cours pour le portfolio et lors des business games (HTML, CSS, Wordpress, Jimdo, Joomla).</li>
+                        <li>Logiciels : Word, Excel, PowerPoint, Cisco Packet Tracer, Oracle VirtualBox, Wampserver, VPN (Barracuda).</li>
+                        <li>OS : Kali Linux, Ubuntu, Microsoft.</li>
+                        <li>Compétences hors informatique : comptabilité, prévention en sécurité incendie, sécurité au travail, conseil dans le domaine du nucléaire, audit qualité, techniques de laboratoire, rédaction de dossiers techniques, veille réglementaire et normative.</li>
                     </ul>
-                    </div>
-                <div class="SAVOIR ÊTRE">
-                    <h3>SAVOIR ÊTRE</h3>
-                    <div class="container1">
-                      <div class="column gauche">
-                        <ul>
-                          <li>Esprit d’équipe.</li>
-                          <li>Rigueur.</li>
-                          <li>Capacité d’apprentissage.</li>
-                          <li>Politesse.</li>
-                          <li>Orientation client.</li>
-                          <li>Organisation.</li>
-                          <li>Prise de décision.</li>
-                          <li>Priorisation.</li>
-                        </ul>                                    
-                     
-                    </div>
-                    <div class="column droite">
-                      <ul>
-                          <li>Curiosité.</li>
-                          <li>Esprit d’analyse.</li>
-                          <li>Autonomie.</li>
-                          <li>Intégrité.</li>
-                          <li>Ponctualité.</li>
-                          <li>Sens de la responsabilité.</li>
-                          <li>Polyvalent.</li>
-                          <li>Adaptabilité.</li>
-                        </ul> 
-                      </div>
-                  </div>
-                    
                 </div>
-                
+                <div class="savoir-etre">
+                    <h3>Savoir-être</h3>
+                    <div class="container1">
+                        <div class="column gauche">
+                            <ul>
+                                <li>Esprit d’équipe</li>
+                                <li>Rigueur</li>
+                                <li>Capacité d’apprentissage</li>
+                                <li>Politesse</li>
+                                <li>Orientation client</li>
+                                <li>Organisation</li>
+                                <li>Prise de décision</li>
+                                <li>Priorisation</li>
+                            </ul>
+                        </div>
+                        <div class="column droite">
+                            <ul>
+                                <li>Curiosité</li>
+                                <li>Esprit d’analyse</li>
+                                <li>Autonomie</li>
+                                <li>Intégrité</li>
+                                <li>Ponctualité</li>
+                                <li>Sens de la responsabilité</li>
+                                <li>Polyvalence</li>
+                                <li>Adaptabilité</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-              
     </div>
     <footer>
-  <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn">
-    <i class="fa fa-linkedin"></i>
-  </a>
-            <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
+        <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
     </footer>
-    
 </body>
 </html>
-
