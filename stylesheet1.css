@@ -109,7 +109,39 @@ section {
         
         }
 
-      .social-button {
+          
+        
+ /* unvisited link */
+a:link {
+    color: white
+        }
+
+/* visited link */
+a:visited {
+    color: blue
+        }
+
+/* mouse over link */
+a:hover {
+    color: green
+        }
+
+/* selected link */
+a:active {
+    color: yellow
+        }
+
+/* social button */
+.social-button:hover {
+      background-color: #497edf;
+      color: white;
+        }
+
+li {
+  margin-top: 10px;
+}
+
+.social-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -122,83 +154,9 @@ section {
             text-decoration: none;
             font-size: 18px;
             transition: background-color 0.3s;
-            }    
-        
- .menu-cadre {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  width: max-content;
-  margin: 40px auto;
-  padding: 20px 30px;
-}
+            }
 
-.menu-horizontal {
-  display: flex;
-  gap: 40px; /* Espace entre les icônes */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-horizontal li {
-  text-align: center;
-}
-
-.menu-horizontal a {
-  text-decoration: none;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-horizontal i {
-  font-size: 2.2em;
-  color: #000;
-  margin-bottom: 8px;
-}
-
-.menu-horizontal span {
-  color: #000;
-  font-size: 1em;
-  margin-top: 5;
-}
-
-
-
-
-
-
-/* unvisited link */
-        a:link {
-        color: white
-        }
-
-        /* visited link */
-        a:visited {
-        color: blue
-        }
-
-        /* mouse over link */
-        a:hover {
-        color: green
-        }
-
-        /* selected link */
-        a:active {
-         color: yellow
-        }
-
-.social-button:hover {
-      background-color: #497edf;
-      color: white;
-        }
-li {
-  margin-top: 10px;
-}
-
-
+/* menu nav */
 :root {
   text-align: center;
   display: flex;
