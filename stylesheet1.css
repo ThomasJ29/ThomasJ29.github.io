@@ -171,6 +171,7 @@ li {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  align-self: center;
 }
 
 .navigation ul {
