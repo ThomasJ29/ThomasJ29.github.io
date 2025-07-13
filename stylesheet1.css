@@ -22,34 +22,6 @@ video {
   z-index: -1; /* Place la vidéo derrière le contenu */
   pointer-events: none; /* Empêche la vidéo de bloquer les clics */
 }
-.rainbow-title {
-  font-size: 3em;
-  font-weight: bold;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,1) 0%,    /* blanc pur */
-  rgba(255,255,255,0.85) 25%, /* un peu moins clair */
-  rgba(255,255,255,0.7) 50%,  /* encore moins clair */
-  rgba(255,255,255,0.55) 75%, /* presque gris très clair */
-  rgba(255,255,255,0.4) 100%  /* le moins clair */
-  );
-  background-size: 200% auto;           /* ← clé pour la fluidité */
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: rainbow-move 3s linear infinite;
-}
-
-@keyframes rainbow-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 
 /* Contenu principal */
 .content {
