@@ -13,6 +13,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Lien vers le fichier JavaScript -->
     <script src="script.js" defer></script>
+    <script src="script1.js" defer></script>
 </head>
 <body>
     <video autoplay muted loop playsinline>
@@ -23,59 +24,48 @@
         <h1>Veilles réglementaires et technologiques.</h1>
     </header>
 
-    <nav class="navigation">
-        <ul>
-            <li class="list active" style="--clr:#f44336">
-                <a href="index.html">
-                    <span class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </span>
-                    <span class="text">Accueil</span>
-                </a>
-            </li>
-            <li class="list" style="--clr:#f44336">
-                <a href="profil.html">
-                    <span class="icon">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </span>
-                    <span class="text">Profil</span>
-                </a>
-            </li>
-            <li class="list" style="--clr:#f44336">
-                <a href="BTS%20SIO.html">
-                    <span class="icon">
-                        <ion-icon name="school-outline"></ion-icon>
-                    </span>
-                    <span class="text">BTS SIO</span>
-                </a>
-            </li>
-            <li class="list" style="--clr:#f44336">
-                <a href="Epreuves.html">
-                    <span class="icon">
-                        <ion-icon name="ribbon-outline"></ion-icon>
-                    </span>
-                    <span class="text">Epreuves</span>
-                </a>
-            </li>
-            <li class="list" style="--clr:#f44336">
-                <a href="projets.html">
-                    <span class="icon">
-                        <ion-icon name="folder-open-outline"></ion-icon>
-                    </span>
-                    <span class="text">Projets</span>
-                </a>
-            </li>
-            <li class="list" style="--clr:#f44336">
-                <a href="veilles.html">
-                    <span class="icon">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </span>
-                    <span class="text">Veilles</span>
-                </a>
-            </li>
-        </ul>
-        <div class="indicator"></div>
-    </nav>
+   <nav class="menu-bar">
+    <ul class="menu-list">
+      <li>
+        <a href="index.html" class="menu-link active">
+          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="profil.html" class="menu-link">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          Profil
+        </a>
+      </li>
+      <li>
+        <a href="BTS%20SIO.html" class="menu-link">
+          <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+          BTS SIO
+        </a>
+      </li>
+      <li>
+        <a href="Epreuves.html" class="menu-link">
+          <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+          Epreuves
+        </a>
+      </li>
+      <li>
+        <a href="projets.html" class="menu-link">
+          <span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>
+          Projets
+        </a>
+      </li>
+      <li>
+        <a href="veilles.html" class="menu-link">
+          <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+          Veilles
+        </a>
+      </li>
+      <!-- L'indicateur doit être après tous les <li> mais dans le même parent -->
+      <div class="indicator"></div>
+    </ul>
+  </nav>
 
     <div class="container">
         <section id="veilles">

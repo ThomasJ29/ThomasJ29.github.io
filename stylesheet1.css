@@ -27,7 +27,11 @@ video {
   font-weight: bold;
   background: linear-gradient(
     90deg,
-    red, orange, yellow, green, cyan, blue, violet, red
+    rgba(255,255,255,1) 0%,    /* blanc pur */
+  rgba(255,255,255,0.85) 25%, /* un peu moins clair */
+  rgba(255,255,255,0.7) 50%,  /* encore moins clair */
+  rgba(255,255,255,0.55) 75%, /* presque gris très clair */
+  rgba(255,255,255,0.4) 100%  /* le moins clair */
   );
   background-size: 200% auto;           /* ← clé pour la fluidité */
   background-clip: text;
@@ -142,23 +146,6 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
-}
-
-/* Liens */
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: #b3b3ff;
-}
-
-a:hover {
-  color: #00ff00;
-}
-
-a:active {
-  color: yellow;
 }
 
 /* Bouton social */
