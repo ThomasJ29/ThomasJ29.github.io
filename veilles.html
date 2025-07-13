@@ -8,9 +8,11 @@
     <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
     <link rel="stylesheet" href="stylesheet1.css">
     
-     <!-- Intégration de Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Icons Script -->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
     
 </head>
 <body>
@@ -19,52 +21,63 @@
     Votre navigateur ne supporte pas la balise vidéo.
   </video>
     <header>
-        <img src="Moi1.jpg" alt="Ma photo" style="width:125px;height:150px">
+        
         <h1>Veilles réglementaires et technologiques.</h1>
                 
     </header>
 
-   <nav class="menu-cadre">
-    <ul class="menu-horizontal">
-      <li>
-        <a href="Accueil.html">
-          <i class="fa-solid fa-house"></i>
-          <span>Accueil</span>
-        </a>
-      </li>
-      <li>
-        <a href="profil.html">
-          <i class="fa-solid fa-user"></i>
-          <span>Profil</span>
-        </a>
-      </li>
-      <li>
-        <a href="BTS SIO.html">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span>BTS SIO</span>
-          </a>
-      </li>
-      <li>
-        <a href="Epreuves.html">
-          <i class="fa-solid fa-question-circle-o"></i>
-          <span>Epreuves</span>
-        </a>
-      </li>
-      <li>
-        <a href="projets.html">
-          <i class="fa-solid fa-folder-open"></i>
-          <span>Projets</span>
-        </a>
-      </li>
-      <li>
-        <a href="veilles.html">
-          <i class="fa-solid fa-eye"></i>
-          <span>Veilles</span>
-        </a>
-      </li>
+   <div class="navigation">
+    <ul>
+        <li class="list active">
+            <a href="index.html">
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">Accueil</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="profil.html">
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="text">Profil</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="BTS SIO.html">
+                <span class="icon">
+                    <ion-icon name="school-outline"></ion-icon>
+                </span>
+                <span class="text">BTS SIO</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="Epreuves.html">
+                <span class="icon">
+                    <ion-icon name="ribbon-outline"></ion-icon>
+                </span>
+                <span class="text">Epreuves</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="projets.html">
+                <span class="icon">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                </span>
+                <span class="text">Projets</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="veilles.html">
+                <span class="icon">
+                    <ion-icon name="fa-eye-outline"></ion-icon>
+                </span>
+                <span class="text">Veilles</span>
+            </a>
+        </li>
     </ul>
-  </nav>
-    </div>
+   </div>
     <div class="container">
         <section id="Veilles">
             <h2>Pourquoi faire des veilles professionnelles</h2>
