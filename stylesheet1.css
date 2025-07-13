@@ -73,27 +73,7 @@ header {
   opacity: 1;
 }
 
-/* Bonjour */
-.wrapper {
-  width: 90%;
-  padding: 5rem;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.bonjour {
-  font-size: 7rem;
-  font-weight: 500;
-  letter-spacing: 8px;
-  padding: 0rem 2rem;
-  border: 10px solid white;
-  text-align: center;
-  opacity: 0;
-  border-radius: 5px;
-  
-}
+
 
 
 /* Conteneur principal */
@@ -262,11 +242,11 @@ li {
     }
     .menu-link.active,
     .menu-link:hover {
-      color: #009505;
+      color: #fff;
     }
     .menu-link.active .icon,
     .menu-link:hover .icon {
-      color: #009505;
+      color: #fff;
     }
 
     /* Indicator recouvrant toute la zone du lien */
