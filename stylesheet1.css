@@ -4,7 +4,7 @@ body {
   padding: 0;
   min-height: 100vh;
   color: white;
-  background-color: black;
+  background: #222327;
   font-size: 100%;
   display: flex;
   flex-direction: column;
@@ -170,6 +170,7 @@ li {
       text-align: center;
       position: relative;
       z-index: 2;
+      color: #fff;
     }
     .menu-link {
       display: flex;
@@ -187,6 +188,7 @@ li {
     }
     .menu-link .icon {
       font-size: 2em;
+      color: #fff;
       margin-bottom: 4px;
       transition: color 0.3s;
       z-index: 3;
