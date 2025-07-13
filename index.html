@@ -13,40 +13,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Lien vers le fichier JavaScript -->
     <script src="script.js" defer></script>
-    <script>
-    // Animation de l'indicateur au clic
-    const menuLinks = document.querySelectorAll('.menu-link');
-    const indicator = document.querySelector('.indicator');
-    const menuList = document.querySelector('.menu-list');
-
-    function moveIndicator(link) {
-      const li = link.parentElement;
-      const lis = Array.from(menuList.children).filter(el => el.tagName === 'LI');
-      const index = lis.indexOf(li);
-      const liWidth = li.offsetWidth;
-      indicator.style.transform = `translateX(${li.offsetLeft + (liWidth - indicator.offsetWidth)/2}px)`;
-    }
-
-    // Initial position
-    window.addEventListener('DOMContentLoaded', () => {
-      const activeLink = document.querySelector('.menu-link.active');
-      if (activeLink) moveIndicator(activeLink);
-    });
-
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        menuLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-        moveIndicator(this);
-      });
-    });
-
-    // Ajuste l'indicateur au redimensionnement
-    window.addEventListener('resize', () => {
-      const activeLink = document.querySelector('.menu-link.active');
-      if (activeLink) moveIndicator(activeLink);
-    });
-  </script>
+     <script src="script1.js" defer></script>
+    
 </head>
 <body>
     <video autoplay muted loop playsinline>
@@ -55,9 +23,9 @@
     </video>
     <header>
         <img src="Moi1.jpg" alt="Ma photo" style="width:125px;height:150px">
-        <div class="wrapper">
-          <div class="Bonjour">Bonjour et bienvenue sur mon portfolio.</div>
-        </div>
+        
+          <h1>Bonjour et bienvenue sur mon portfolio.</h1>
+        
     </header>
 
     <nav class="menu-bar">
