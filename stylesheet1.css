@@ -22,22 +22,14 @@ video {
   z-index: -1; /* Place la vidéo derrière le contenu */
   pointer-events: none; /* Empêche la vidéo de bloquer les clics */
 }
-/* Titre arc en ciel */
 .rainbow-title {
   font-size: 3em;
   font-weight: bold;
   background: linear-gradient(
     90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet,
-    red
+    red, orange, yellow, green, cyan, blue, violet, red
   );
-  background-size: 200% auto;
+  background-size: 200% auto;           /* ← clé pour la fluidité */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -53,6 +45,7 @@ video {
     background-position: 100% 50%;
   }
 }
+
 
 /* Contenu principal */
 .content {
