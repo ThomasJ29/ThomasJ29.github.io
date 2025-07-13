@@ -7,102 +7,96 @@
     <meta name="author" content="Jérémy Thomas">
     <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
     <link rel="stylesheet" href="stylesheet1.css">
-    
-     <!-- Icons Script -->
-     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <!-- Lien vers le fichier JavaScript -->
-    <script src="script.js"></script>
-    
+
+    <!-- Icons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <video autoplay muted loop>
-    <source src="video-fond.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la balise vidéo.
-  </video>
+        <source src="video-fond.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
     <header>
-        
         <h1>Mes projets</h1>
-                
     </header>
 
-    <div class="navigation">
-    <ul>
-        <li class="list active">
-            <a href="index.html">
-                <span class="icon">
-                    <ion-icon name="home-outline"></ion-icon>
-                </span>
-                <span class="text">Accueil</span>
-            </a>
-        </li>
-        <li class="list">
-            <a href="profil.html">
-                <span class="icon">
-                    <ion-icon name="person-outline"></ion-icon>
-                </span>
-                <span class="text">Profil</span>
-            </a>
-        </li>
-        <li class="list">
-            <a href="BTS SIO.html">
-                <span class="icon">
-                    <ion-icon name="school-outline"></ion-icon>
-                </span>
-                <span class="text">BTS SIO</span>
-            </a>
-        </li>
-        <li class="list">
-            <a href="Epreuves.html">
-                <span class="icon">
-                    <ion-icon name="ribbon-outline"></ion-icon>
-                </span>
-                <span class="text">Epreuves</span>
-            </a>
-        </li>
-        <li class="list">
-            <a href="projets.html">
-                <span class="icon">
-                    <ion-icon name="folder-open-outline"></ion-icon>
-                </span>
-                <span class="text">Projets</span>
-            </a>
-        </li>
-        <li class="list">
-            <a href="veilles.html">
-                <span class="icon">
-                    <ion-icon name="fa-eye-outline"></ion-icon>
-                </span>
-                <span class="text">Veilles</span>
-            </a>
-        </li>
-    </ul>
-    <div class="indicator"></div>
-   </div>
+    <nav class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Accueil</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="profil.html">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">Profil</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="BTS%20SIO.html">
+                    <span class="icon">
+                        <ion-icon name="school-outline"></ion-icon>
+                    </span>
+                    <span class="text">BTS SIO</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="Epreuves.html">
+                    <span class="icon">
+                        <ion-icon name="ribbon-outline"></ion-icon>
+                    </span>
+                    <span class="text">Epreuves</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="projets.html">
+                    <span class="icon">
+                        <ion-icon name="folder-open-outline"></ion-icon>
+                    </span>
+                    <span class="text">Projets</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="veilles.html">
+                    <span class="icon">
+                        <!-- Correction de l'icône : "fa-eye-outline" n'existe pas sur Ionicons -->
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </span>
+                    <span class="text">Veilles</span>
+                </a>
+            </li>
+        </ul>
+        <div class="indicator"></div>
+    </nav>
+
     <div class="container">
-        <section id="projet 1">
+        <section id="projet-ecole">
             <h2>Projet école</h2>
-            <p></p>
-            <p> </p>
+            <p><!-- Ajoute ici la description de ton projet d'école --></p>
         </section>
-        <section id="projet 2">
+        <section id="projet-professionnel">
             <h2>Projet professionnel</h2>
-            
-        
+            <p><!-- Ajoute ici la description de ton projet professionnel --></p>
         </section>
-        <section id="projet 3">
+        <section id="projet-personnel">
             <h2>Projet personnel</h2>
-            
-        
-        </section>      
+            <p><!-- Ajoute ici la description de ton projet personnel --></p>
+        </section>
     </div>
     <footer>
-  <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn">
-    <i class="fa fa-linkedin"></i>
-  </a>
-            <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
+        <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
     </footer>
-    
 </body>
 </html>
-
