@@ -193,13 +193,7 @@ li {
       letter-spacing: 0.01em;
       transition: color 0.3s;
     }
-    /* Hover/Active : Animation Matrix */
-    .menu-link:hover .icon,
-    .menu-link.active .icon {
-      color: #00ff41;
-      animation: matrix-fall 0.7s;
-      filter: drop-shadow(0 0 10px #00ff41) drop-shadow(0 0 20px #00ff41);
-    }
+    
     /* Glow sur le texte au hover */
     .menu-link:hover .text {
       color: #aaffaa;
