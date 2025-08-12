@@ -7,18 +7,20 @@
   <meta name="author" content="Jérémy Thomas" />
   <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
   
-  <!-- CSS principal -->
+  <!-- CSS principal (avec variables, menu, mode clair/sombre) -->
   <link rel="stylesheet" href="stylesheet1.css" />
-
+  
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-  <!-- Font Awesome pour l’icône burger -->
+  
+  <!-- Font Awesome pour l’icône burger (bars) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1CmZ+e1k5zEjt58qIAqbeE1ueq7q+F2MYx6XtON6wMlK7vN1+rf0wK3uZQJpFztFkzinhFVZMO9FjBvR40XQ=="
     crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 </head>
 <body>
@@ -30,22 +32,58 @@
 
   <!-- En-tête -->
   <header>
-    <img src="Moi1.jpg" alt="Photo de Jérémy Thomas" width="125" height="150" style="object-fit: cover" />
+    <img
+      src="Moi1.jpg"
+      alt="Photo de Jérémy Thomas"
+      width="125"
+      height="150"
+      style="object-fit: cover"
+    />
     <h1>Bonjour et bienvenue sur mon portfolio.</h1>
   </header>
 
   <!-- Menu -->
   <nav class="menu-cadre" role="navigation" aria-label="Menu principal">
-    <button class="menu-toggle" aria-label="Ouvrir / fermer le menu">
+    <button class="menu-toggle" aria-label="Ouvrir/fermer le menu">
       <i class="fa-solid fa-bars"></i>
     </button>
     <ul class="menu-horizontal">
-      <li><a href="index.html" class="menu-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span>Accueil</a></li>
-      <li><a href="profil.html" class="menu-link"><span class="icon"><ion-icon name="person-outline"></ion-icon></span>Profil</a></li>
-      <li><a href="BTSSIO.html" class="menu-link"><span class="icon"><ion-icon name="school-outline"></ion-icon></span>BTS SIO</a></li>
-      <li><a href="Epreuves.html" class="menu-link"><span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>Epreuves</a></li>
-      <li><a href="projets.html" class="menu-link"><span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>Projets</a></li>
-      <li><a href="veilles.html" class="menu-link"><span class="icon"><ion-icon name="eye-outline"></ion-icon></span>Veilles</a></li>
+      <li>
+        <a href="index.html" class="menu-link">
+          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="profil.html" class="menu-link">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          Profil
+        </a>
+      </li>
+      <li>
+        <a href="BTSSIO.html" class="menu-link">
+          <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+          BTS SIO
+        </a>
+      </li>
+      <li>
+        <a href="Epreuves.html" class="menu-link">
+          <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+          Epreuves
+        </a>
+      </li>
+      <li>
+        <a href="projets.html" class="menu-link">
+          <span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>
+          Projets
+        </a>
+      </li>
+      <li>
+        <a href="veilles.html" class="menu-link">
+          <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+          Veilles
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -53,44 +91,57 @@
   <div class="container">
     <section id="accueil" class="content">
       <h2>À PROPOS DE MOI …</h2>
-      <p>Ancien sous-officier de la Marine Nationale, aujourd’hui en reconversion professionnelle dans le domaine de l’informatique et des réseaux.</p>
-      <p>Passionné de longue date par les technologies numériques, j’ai entrepris un BTS Services Informatiques aux Organisations (SIO), option SISR, afin de consolider mes compétences et évoluer dans un secteur qui allie rigueur technique et innovation.</p>
+      <p>
+        Ancien sous-officier de la Marine Nationale, aujourd’hui en reconversion
+        professionnelle dans le domaine de l’informatique et des réseaux.
+      </p>
+      <p>
+        Passionné de longue date par les technologies numériques, j’ai entrepris un
+        BTS Services Informatiques aux Organisations (SIO), option Solutions
+        d’Infrastructure, Systèmes et Réseaux (SISR), afin de consolider mes
+        compétences et évoluer dans un secteur qui allie rigueur technique et
+        innovation.
+      </p>
     </section>
 
     <section id="experience" class="content">
       <h2>Expérience</h2>
+
       <div class="experience">
         <div>
           <h3>Expérience Professionnelle :</h3>
-          <h4>Marine Nationale – 22 ans (Responsable technique & conseiller spécialisé)</h4>
+          <h4>Marine Nationale – 22 ans d’engagement (Responsable technique & conseiller spécialisé)</h4>
           <ul>
-            <li>Prévention des risques nucléaires et maintenance d’un réseau de détection de radioactivité.</li>
-            <li>Gestion d’un système informatisé en réseau (IP, RJ45, serveur).</li>
-            <li>Encadrement d’un laboratoire de mesures physiques.</li>
-            <li>Conseiller auprès de l’amiral de la flotte Atlantique sur le nucléaire.</li>
+            <li>Spécialisation en prévention des risques nucléaires et maintenance d’un réseau de détection de radioactivité (2SNM).</li>
+            <li>Gestion d’un système informatisé en réseau incluant adressage IP, brassage de câbles RJ45 sur hub et récupération de données sur serveur.</li>
+            <li>Encadrement d’un laboratoire de mesures physiques (suivi qualité, gestion de données sous Excel, relations clients et autorités de régulation).</li>
+            <li>Conseiller auprès de l’amiral de la flotte Atlantique dans le domaine du nucléaire.</li>
           </ul>
         </div>
 
         <div>
           <h3>Expérience Informatique & Technique</h3>
-          <h4>Avant reconversion :</h4>
+          <h4>Expériences antérieures :</h4>
           <ul>
-            <li>Découverte de l’informatique avec un Amstrad CPC 464 (BASIC).</li>
-            <li>1999 : démonstrateur et distributeur pour un FAI (AOL).</li>
+            <li>Découverte de l’informatique avec un Amstrad CPC 464 (langage BASIC).</li>
+            <li>1999 : démonstrateur et distributeur pour un fournisseur d’accès Internet (AOL).</li>
           </ul>
 
           <h4>Alternance – Technicien Service Client, Konica Minolta :</h4>
           <ul>
-            <li>Support et maintenance d’imprimantes en réseau.</li>
-            <li>Intégration dans infrastructures existantes (IP, SMTP, SMB, sécurité).</li>
-            <li>Mise en place de solutions adaptées aux clients.</li>
-            <li>Monitoring à distance des systèmes d’impression.</li>
+            <li>Support technique et maintenance d’imprimantes en réseau.</li>
+            <li>Intégration des imprimantes dans les infrastructures réseaux existantes.</li>
+            <li>Mise en place de solutions numériques adaptées aux besoins des entreprises clientes.</li>
+            <li>Configuration et sécurisation des systèmes d’impression avec monitoring à distance.</li>
           </ul>
         </div>
 
         <div>
           <h3>Objectifs & Perspectives</h3>
-          <p>Souhaite évoluer vers l’administration réseau, la cybersécurité et les infrastructures IT critiques.</p>
+          <p>
+            Fort d’une solide expérience technique et réseau, mon objectif est d’évoluer vers l’administration réseau,
+            la cybersécurité et les infrastructures IT critiques.
+          </p>
         </div>
       </div>
     </section>
@@ -98,13 +149,19 @@
 
   <!-- Footer -->
   <footer>
-    <a href="https://www.linkedin.com/in/tonprofil" class="social-button" target="_blank" rel="noopener">
+    <a
+      href="https://www.linkedin.com/in/tonprofil"
+      class="social-button"
+      title="LinkedIn"
+      target="_blank"
+      rel="noopener"
+    >
       <ion-icon name="logo-linkedin"></ion-icon>
     </a>
     <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
   </footer>
 
-  <!-- Script menu -->
+  <!-- Script JS menu -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuLinks = document.querySelectorAll(".menu-horizontal a");
@@ -123,12 +180,12 @@
         });
       });
 
-      // Toggle burger
+      // Burger toggle
       burgerBtn.addEventListener("click", () => {
         menuList.classList.toggle("open");
       });
 
-      // Fermeture auto sur mobile
+      // Fermeture auto sur clic (mobile)
       menuLinks.forEach(link => {
         link.addEventListener("click", () => {
           if (window.innerWidth <= 768) {
