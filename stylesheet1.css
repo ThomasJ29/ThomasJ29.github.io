@@ -4,7 +4,7 @@
 :root {
   /* Couleurs */
   --color-bg: #f5f5f5;
-  --color-text: #fff;
+  --color-text: #222;
   --color-accent: #4CAF50;
   --color-accent-hover: #388e3c;
   --color-menu-bg: #e1e1e1;
@@ -78,6 +78,24 @@ header {
   text-align: center;
 }
 
+/* Titres */
+h1 {
+  font-style: oblique;
+  font-size: var(--font-size-h1);
+  color: #fff; /* forcé en blanc */
+}
+h2 {
+  font-size: var(--font-size-h2);
+  text-decoration: underline;
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-style: italic;
+}
+
 .container {
   width: 50%;
   margin: auto;
@@ -89,21 +107,19 @@ header {
 }
 
 section {
-  margin: 5rem 5%;
+  margin: 2rem 5%; /* espacement réduit */
   font-size: 125%;
 }
-
-/* TITRES */
-h1 { font-style: oblique; font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); text-decoration: underline; }
-h3 { font-size: var(--font-size-h3); }
-h4 { font-size: var(--font-size-h4); font-style: italic; }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+  color: #fff; /* forcé en blanc */
+}
+footer p {
+  color: #fff;
 }
 .social-button {
   display: inline-flex;
@@ -119,7 +135,9 @@ footer {
   font-size: 18px;
   transition: background-color 0.3s;
 }
-.social-button:hover { background-color: var(--color-hover-btn); }
+.social-button:hover {
+  background-color: var(--color-hover-btn);
+}
 
 /* ================== */
 /* MENU */
@@ -139,7 +157,9 @@ footer {
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-.menu-horizontal li { margin: 0 15px; }
+.menu-horizontal li {
+  margin: 0 15px;
+}
 
 .menu-horizontal a {
   display: flex;
@@ -147,13 +167,12 @@ footer {
   align-items: center;
   text-decoration: none;
   color: var(--color-text);
-  font-size: 0.9rem;
+  font-size: 1.8rem; /* texte 2× plus gros */
   transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
-.menu-horizontal i,
 .menu-horizontal .icon {
-  font-size: 1.8rem;
+  font-size: 3.6rem; /* icônes 2× plus grosses */
   margin-bottom: 5px;
   color: var(--color-icon);
   transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
@@ -181,11 +200,13 @@ footer {
 
 .menu-horizontal a:hover .icon {
   color: var(--color-glow);
-  animation: 
+  animation:
     matrix-glow 0.8s infinite alternate ease-in-out,
     matrix-glitch 0.3s infinite steps(2, end);
 }
-.menu-horizontal a.dimmed { opacity: 0.4; }
+.menu-horizontal a.dimmed {
+  opacity: 0.4;
+}
 
 /* BOUTON BURGER */
 .menu-toggle {
@@ -202,8 +223,9 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .menu-toggle { display: block; }
-
+  .menu-toggle {
+    display: block;
+  }
   .menu-horizontal {
     flex-direction: column;
     align-items: center;
@@ -215,5 +237,7 @@ footer {
     max-height: 500px;
     opacity: 1;
   }
-  .menu-horizontal li { margin: 12px 0; }
+  .menu-horizontal li {
+    margin: 12px 0;
+  }
 }
