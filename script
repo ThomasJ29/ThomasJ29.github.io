@@ -4,29 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.querySelector(".menu-toggle");
   const menuList = document.querySelector(".menu-horizontal");
 
-  // Effet "dimmed" au survol
+  // Effet "dimmed"
   menuLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
       menuLinks.forEach(otherLink => {
-        if (otherLink !== link) {
-          otherLink.classList.add("dimmed");
-        }
+        if (otherLink !== link) otherLink.classList.add("dimmed");
       });
     });
-
     link.addEventListener("mouseleave", () => {
-      menuLinks.forEach(otherLink => {
-        otherLink.classList.remove("dimmed");
-      });
+      menuLinks.forEach(otherLink => otherLink.classList.remove("dimmed"));
     });
   });
 
-  // Ouverture / fermeture du menu burger
+  // Burger toggle
   burgerBtn.addEventListener("click", () => {
     menuList.classList.toggle("open");
   });
 
-  // Fermeture auto après clic sur un lien (mobile)
+  // Fermeture auto sur clic (mobile)
   menuLinks.forEach(link => {
     link.addEventListener("click", () => {
       if (window.innerWidth <= 768) {

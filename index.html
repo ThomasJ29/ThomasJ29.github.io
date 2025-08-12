@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="portfolio, BTS">
-    <meta name="author" content="Jérémy Thomas">
-    <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
-    <link rel="stylesheet" href="stylesheet1.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:400,700">
-    <!-- Menu Script -->
-    <script src="script"></script>
-    <!-- Icons Script -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="portfolio, BTS SIO, SISR, informatique, réseaux" />
+  <meta name="author" content="Jérémy Thomas" />
+  <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
+  
+  <!-- CSS principal (avec variables, menu, mode clair/sombre) -->
+  <link rel="stylesheet" href="stylesheet1.css" />
+  
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Font Awesome pour l’icône burger (bars) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1CmZ+e1k5zEjt58qIAqbeE1ueq7q+F2MYx6XtON6wMlK7vN1+rf0wK3uZQJpFztFkzinhFVZMO9FjBvR40XQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <video autoplay muted loop playsinline>
-        <source src="video-fond.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la balise vidéo.
-    </video>
-    <header>
-        <img src="Moi1.jpg" alt="Ma photo" style="width:125px;height:150px">
-        
-          <h1>Bonjour et bienvenue sur mon portfolio.</h1>
-        
-    </header>
+  <!-- Vidéo de fond -->
+  <video autoplay muted loop playsinline>
+    <source src="video-fond.mp4" type="video/mp4" />
+    Votre navigateur ne supporte pas la balise vidéo.
+  </video>
 
-    <nav class="menu-cadre">
+  <!-- En-tête -->
+  <header>
+    <img
+      src="Moi1.jpg"
+      alt="Photo de Jérémy Thomas"
+      width="125"
+      height="150"
+      style="object-fit: cover"
+    />
+    <h1>Bonjour et bienvenue sur mon portfolio.</h1>
+  </header>
+
+  <!-- Menu -->
+  <nav class="menu-cadre" role="navigation" aria-label="Menu principal">
+    <button class="menu-toggle" aria-label="Ouvrir/fermer le menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <ul class="menu-horizontal">
       <li>
         <a href="index.html" class="menu-link">
@@ -66,58 +84,116 @@
           Veilles
         </a>
       </li>
-     
     </ul>
   </nav>
 
-    <div class="container">
-        <section id="accueil">
-            <h2>À PROPOS DE MOI …</h2>
-            <p>Ancien sous-officier de la Marine Nationale, aujourd’hui en reconversion professionnelle dans le domaine de l’informatique et des réseaux.</p>
-            <p>Passionné de longue date par les technologies numériques, j’ai entrepris un BTS Services Informatiques aux Organisations (SIO), option Solutions d’Infrastructure, Systèmes et Réseaux (SISR), afin de consolider mes compétences et évoluer dans un secteur qui allie rigueur technique et innovation.</p>
-        </section>
-        <section id="experience">
-            <h2>Expérience</h2>
-            <div class="experience">
-                <div>
-                    <h3>Expérience Professionnelle :</h3>
-                    <h4>Marine Nationale – 22 ans d’engagement (Responsable technique & conseiller spécialisé)</h4>
-                    <ul> 
-                        <li>Spécialisation en prévention des risques nucléaires et maintenance d’un réseau de détection de radioactivité (2SNM).</li>
-                        <li>Gestion d’un système informatisé en réseau incluant adressage IP, brassage de câbles RJ45 sur hub et récupération de données sur serveur.</li>
-                        <li>Promotion au poste de responsable technique, encadrant les activités d’un laboratoire de mesures physiques (suivi qualité, gestion de données sous Excel, relations clients et autorités de régulation).</li>
-                        <li>Conseiller auprès de l’amiral de la flotte Atlantique dans le domaine du nucléaire.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Expérience Informatique & Technique</h3>
-                    <h4>Expériences antérieures à la reconversion :</h4>
-                    <ul>
-                        <li>Découverte de l’informatique dans les années 90 avec un Amstrad CPC 464, apprentissage du langage BASIC.</li>
-                        <li>1999 : démonstrateur et distributeur pour un fournisseur d’accès Internet (AOL).</li>
-                    </ul>
-                    <h4>Alternance – Technicien Service Client, Konica Minolta :</h4>
-                    <ul>
-                        <li>Support technique et maintenance d’imprimantes en réseau pour les clients.</li>
-                        <li>Collaboration avec les administrateurs réseaux pour l’intégration des imprimantes dans les infrastructures existantes (configuration IP, choix des ports SMTP, SMB, protocoles de sécurité).</li>
-                        <li>Mise en place de solutions numériques adaptées aux besoins des entreprises clientes, y compris pour les structures sans infrastructure réseau préexistante.</li>
-                        <li>Configuration et sécurisation des systèmes d’impression avec une connexion sortante automatisée vers le réseau de Konica Minolta pour la gestion des consommables.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Objectifs & Perspectives</h3>
-                    <p>Fort d’une solide expérience en gestion technique, administration de systèmes informatisés et support réseau, mon objectif est d’évoluer dans le domaine des systèmes et réseaux informatiques, avec un intérêt particulier pour l’administration réseau, la cybersécurité et les infrastructures IT critiques.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+  <!-- Contenu principal -->
+  <div class="container">
+    <section id="accueil" class="content">
+      <h2>À PROPOS DE MOI …</h2>
+      <p>
+        Ancien sous-officier de la Marine Nationale, aujourd’hui en reconversion
+        professionnelle dans le domaine de l’informatique et des réseaux.
+      </p>
+      <p>
+        Passionné de longue date par les technologies numériques, j’ai entrepris un
+        BTS Services Informatiques aux Organisations (SIO), option Solutions
+        d’Infrastructure, Systèmes et Réseaux (SISR), afin de consolider mes
+        compétences et évoluer dans un secteur qui allie rigueur technique et
+        innovation.
+      </p>
+    </section>
 
-    <footer>
-        <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
-            <!-- Utilisation de Ionicons pour l'icône LinkedIn -->
-            <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
-    </footer>
+    <section id="experience" class="content">
+      <h2>Expérience</h2>
+
+      <div class="experience">
+        <div>
+          <h3>Expérience Professionnelle :</h3>
+          <h4>Marine Nationale – 22 ans d’engagement (Responsable technique & conseiller spécialisé)</h4>
+          <ul>
+            <li>Spécialisation en prévention des risques nucléaires et maintenance d’un réseau de détection de radioactivité (2SNM).</li>
+            <li>Gestion d’un système informatisé en réseau incluant adressage IP, brassage de câbles RJ45 sur hub et récupération de données sur serveur.</li>
+            <li>Encadrement d’un laboratoire de mesures physiques (suivi qualité, gestion de données sous Excel, relations clients et autorités de régulation).</li>
+            <li>Conseiller auprès de l’amiral de la flotte Atlantique dans le domaine du nucléaire.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Expérience Informatique & Technique</h3>
+          <h4>Expériences antérieures :</h4>
+          <ul>
+            <li>Découverte de l’informatique avec un Amstrad CPC 464 (langage BASIC).</li>
+            <li>1999 : démonstrateur et distributeur pour un fournisseur d’accès Internet (AOL).</li>
+          </ul>
+
+          <h4>Alternance – Technicien Service Client, Konica Minolta :</h4>
+          <ul>
+            <li>Support technique et maintenance d’imprimantes en réseau.</li>
+            <li>Intégration des imprimantes dans les infrastructures réseaux existantes.</li>
+            <li>Mise en place de solutions numériques adaptées aux besoins des entreprises clientes.</li>
+            <li>Configuration et sécurisation des systèmes d’impression avec monitoring à distance.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Objectifs & Perspectives</h3>
+          <p>
+            Fort d’une solide expérience technique et réseau, mon objectif est d’évoluer vers l’administration réseau,
+            la cybersécurité et les infrastructures IT critiques.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a
+      href="https://www.linkedin.com/in/tonprofil"
+      class="social-button"
+      title="LinkedIn"
+      target="_blank"
+      rel="noopener"
+    >
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script JS menu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLinks = document.querySelectorAll(".menu-horizontal a");
+      const burgerBtn = document.querySelector(".menu-toggle");
+      const menuList = document.querySelector(".menu-horizontal");
+
+      // Effet "dimmed"
+      menuLinks.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+          menuLinks.forEach(otherLink => {
+            if (otherLink !== link) otherLink.classList.add("dimmed");
+          });
+        });
+        link.addEventListener("mouseleave", () => {
+          menuLinks.forEach(otherLink => otherLink.classList.remove("dimmed"));
+        });
+      });
+
+      // Burger toggle
+      burgerBtn.addEventListener("click", () => {
+        menuList.classList.toggle("open");
+      });
+
+      // Fermeture auto sur clic (mobile)
+      menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            menuList.classList.remove("open");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
