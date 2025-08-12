@@ -87,5 +87,39 @@
         </a>
         <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
     </footer>
+  <!-- Script menu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLinks = document.querySelectorAll(".menu-horizontal a");
+      const burgerBtn = document.querySelector(".menu-toggle");
+      const menuList = document.querySelector(".menu-horizontal");
+
+      // Effet "dimmed"
+      menuLinks.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+          menuLinks.forEach(otherLink => {
+            if (otherLink !== link) otherLink.classList.add("dimmed");
+          });
+        });
+        link.addEventListener("mouseleave", () => {
+          menuLinks.forEach(otherLink => otherLink.classList.remove("dimmed"));
+        });
+      });
+
+      // Toggle burger
+      burgerBtn.addEventListener("click", () => {
+        menuList.classList.toggle("open");
+      });
+
+      // Fermeture auto sur mobile
+      menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            menuList.classList.remove("open");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
