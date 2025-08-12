@@ -245,3 +245,23 @@ footer p {
     margin: 12px 0;
   }
 }
+
+/* Amélioration visibilité burger */
+.menu-toggle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-text);
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+/* Adaptation container et textes en mobile */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+    font-size: 90%;
+  }
+  h1, h2, h3, h4 {
+    font-size: 90%;
+  }
+}
