@@ -12,7 +12,6 @@
   --color-primary-btn: #497edf;
   --color-hover-btn: #355bb2;
   --color-glow: #00b33c;
-  --color-menu-text: #000; /* texte noir en mode clair */
 
   /* Typographie */
   --font-main: Arial, sans-serif;
@@ -44,7 +43,6 @@
     --color-primary-btn: #497edf;
     --color-hover-btn: #355bb2;
     --color-glow: #00ff41;
-    --color-menu-text: #fff; /* texte blanc en mode sombre */
   }
 }
 
@@ -84,7 +82,7 @@ header {
 h1 {
   font-style: oblique;
   font-size: var(--font-size-h1);
-  color: #fff;
+  color: #fff; /* forcé en blanc */
 }
 h2 {
   font-size: var(--font-size-h2);
@@ -109,7 +107,7 @@ h4 {
 }
 
 section {
-  margin: 2rem 5%;
+  margin: 2rem 5%; /* espacement réduit */
   font-size: 125%;
 }
 
@@ -118,7 +116,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
-  color: #fff;
+  color: #fff; /* forcé en blanc */
 }
 footer p {
   color: #fff;
@@ -148,8 +146,8 @@ footer p {
   background-color: var(--color-menu-bg);
   padding: 10px 0;
   position: relative;
-  border-radius: var(--radius-medium);
-  margin-bottom: 20px;
+  border-radius: var(--radius-medium); /* coins arrondis identiques au container */
+  margin-bottom: 20px; /* séparation avec le container suivant */
 }
 
 .menu-horizontal {
@@ -170,13 +168,13 @@ footer p {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: var(--color-menu-text);
-  font-size: 1.8rem;
+  color: #000; /* texte noir */
+  font-size: 1.8rem; /* 2× plus gros */
   transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-horizontal .icon {
-  font-size: 3.6rem;
+  font-size: 3.6rem; /* icônes 2× plus grosses */
   margin-bottom: 5px;
   color: var(--color-icon);
   transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
