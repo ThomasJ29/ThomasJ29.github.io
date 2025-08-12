@@ -1,163 +1,40 @@
-/* ===================== */
-/* VARIABLES PAR DÉFAUT (mode clair) */
-/* ===================== */
-:root {
-  /* Couleurs */
-  --color-bg: #f5f5f5;
-  --color-text: #222;
-  --color-accent: #4CAF50;
-  --color-accent-hover: #388e3c;
-  --color-menu-bg: #e1e1e1;
-  --color-icon: #555;
-  --color-primary-btn: #497edf;
-  --color-hover-btn: #355bb2;
-  --color-glow: #00b33c;
-  --color-menu-text: #000; /* texte noir en mode clair */
-
-  /* Typographie */
-  --font-main: Arial, sans-serif;
-  --font-size-base: 100%;
-  --font-size-h1: 2.5em;
-  --font-size-h2: 2em;
-  --font-size-h3: 1.5em;
-  --font-size-h4: 1.2em;
-
-  /* Layout */
-  --radius-small: 5px;
-  --radius-medium: 10px;
-  --spacing-small: 10px;
-  --spacing-medium: 20px;
-  --spacing-large: 2rem;
-}
-
-/* ===================== */
-/* MODE SOMBRE AUTOMATIQUE */
-/* ===================== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #222327;
-    --color-text: #ffffff;
-    --color-accent: #4CAF50;
-    --color-accent-hover: #355bb2;
-    --color-menu-bg: #232526;
-    --color-icon: #bbbbbb;
-    --color-primary-btn: #497edf;
-    --color-hover-btn: #355bb2;
-    --color-glow: #00ff41;
-    --color-menu-text: #fff; /* texte blanc en mode sombre */
-  }
-}
-
-/* ================== */
-/* LAYOUT GLOBAL */
-/* ================== */
-body {
-  font-family: var(--font-main);
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-bg);
-  font-size: var(--font-size-base);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
-header {
-  padding: var(--spacing-large) var(--spacing-small);
-  text-align: center;
-}
-
-/* Titres */
-h1 {
-  font-style: oblique;
-  font-size: var(--font-size-h1);
-  color: #fff;
-}
-h2 {
-  font-size: var(--font-size-h2);
-  text-decoration: underline;
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h4 {
-  font-size: var(--font-size-h4);
-  font-style: italic;
-}
-
-.container {
-  width: 50%;
-  margin: auto;
-  overflow: hidden;
-  padding: var(--spacing-large) var(--spacing-small);
-  background-color: rgba(148, 148, 148, 0.9);
-  border-radius: var(--radius-medium);
-  box-sizing: border-box;
-}
-
-section {
-  margin: 2rem 5%;
-  font-size: 125%;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-  color: #fff;
-}
-footer p {
-  color: #fff;
-}
-.social-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--color-primary-btn);
-  color: var(--color-text);
-  border-radius: 4px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-.social-button:hover {
-  background-color: var(--color-hover-btn);
-}
-
 /* ================== */
 /* MENU */
 /* ================== */
 .menu-cadre {
   background-color: var(--color-menu-bg);
-  padding: 10px 0;
+  padding: 10px 20px; /* espacement horizontal ajouté */
   position: relative;
   border-radius: var(--radius-medium);
   margin-bottom: 20px;
+
+  display: flex;               /* pour aligner toggle et menu */
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* Toggle burger */
+.menu-toggle {
+  display: none;               /* caché en desktop */
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 3rem;
+  font-weight: 900;
+  cursor: pointer;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+  /* placé en flux normal, pas besoin de position absolute */
+}
+
+/* Menu horizontal */
 .menu-horizontal {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-grow: 1;               /* prend l’espace restant */
+  gap: 30px;                  /* espacement entre items */
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
@@ -212,40 +89,32 @@ footer p {
   opacity: 0.4;
 }
 
-/* BOUTON BURGER */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--color-text);
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 8px;
-  right: 15px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
+
   .menu-horizontal {
     flex-direction: column;
-    align-items: center;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    width: 100%;
+    margin: 10px 0 0 0;
+    /* transition for open/close */
   }
+
   .menu-horizontal.open {
-    max-height: 500px;
+    max-height: 600px; /* assez grand pour tous les items */
     opacity: 1;
   }
+
   .menu-horizontal li {
     margin: 12px 0;
   }
 }
-
 /* Amélioration visibilité burger */
 .menu-toggle {
   font-size: 3rem;
@@ -259,9 +128,9 @@ footer p {
   .container {
     width: 90%;
     padding: 1rem;
-    font-size: 50%;
+    font-size: 90%;
   }
   h1, h2, h3, h4 {
-    font-size: 70%;
+    font-size: 50%;
   }
 }
