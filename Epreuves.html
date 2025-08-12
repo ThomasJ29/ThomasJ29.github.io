@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="portfolio, BTS, nettoyage, informatique, site, web">
-    <meta name="author" content="Jérémy Thomas">
-    <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
-    <link rel="stylesheet" href="stylesheet1.css">
- <!-- Menu Script -->
-    <script src="script"></script>
-    <!-- Icons Script -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="portfolio, BTS SIO, SISR, informatique, réseaux" />
+  <meta name="author" content="Jérémy Thomas" />
+  <title>Portfolio | Thomas Jérémy | BTS SIO/SISR</title>
   
+  <!-- CSS principal (avec variables, menu, mode clair/sombre) -->
+  <link rel="stylesheet" href="stylesheet1.css" />
+  
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Font Awesome pour l’icône burger (bars) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1CmZ+e1k5zEjt58qIAqbeE1ueq7q+F2MYx6XtON6wMlK7vN1+rf0wK3uZQJpFztFkzinhFVZMO9FjBvR40XQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <video autoplay muted loop playsinline>
-        <source src="video-fond.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la balise vidéo.
-    </video>
-    <header>
-       
-        <h1>Présentation des épreuves E5 et E6</h1>
-    </header>
+  <!-- Vidéo de fond -->
+  <video autoplay muted loop playsinline>
+    <source src="video-fond.mp4" type="video/mp4" />
+    Votre navigateur ne supporte pas la balise vidéo.
+  </video>
 
-   <nav class="menu-bar">
-    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-    <ul class="menu-list">
+  <!-- En-tête -->
+  <header>
+    <img
+      src="Moi1.jpg"
+      alt="Photo de Jérémy Thomas"
+      width="125"
+      height="150"
+      style="object-fit: cover"
+    />
+    <h1>Présentation des épreuves E5 et E6</h1>
+  </header>
+
+  <!-- Menu -->
+  <nav class="menu-cadre" role="navigation" aria-label="Menu principal">
+    <button class="menu-toggle" aria-label="Ouvrir/fermer le menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="menu-horizontal">
       <li>
-        <a href="index.html" class="menu-link active">
+        <a href="index.html" class="menu-link">
           <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
           Accueil
         </a>
@@ -64,8 +84,6 @@
           Veilles
         </a>
       </li>
-      <!-- L'indicateur doit être après tous les <li> mais dans le même parent -->
-      <div class="indicator"></div>
     </ul>
   </nav>
 
@@ -83,7 +101,7 @@
     </div>
 
     <footer>
-        <a href="https://www.linkedin.com/in/tonprofil" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/jthom29/" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
             <ion-icon name="logo-linkedin"></ion-icon>
         </a>
         <p>&copy; 2025 Thomas Jérémy. Tous droits réservés.</p>
