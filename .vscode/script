@@ -1,0 +1,38 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = document.querySelectorAll(".menu-horizontal a");
+  const burgerBtn = document.querySelector(".menu-toggle");
+  const menuList = document.querySelector(".menu-horizontal");
+
+  // Effet "dimmed" au survol
+  menuLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      menuLinks.forEach(otherLink => {
+        if (otherLink !== link) {
+          otherLink.classList.add("dimmed");
+        }
+      });
+    });
+
+    link.addEventListener("mouseleave", () => {
+      menuLinks.forEach(otherLink => {
+        otherLink.classList.remove("dimmed");
+      });
+    });
+  });
+
+  // Ouverture / fermeture du menu burger
+  burgerBtn.addEventListener("click", () => {
+    menuList.classList.toggle("open");
+  });
+
+  // Fermeture auto après clic sur un lien (mobile)
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        menuList.classList.remove("open");
+      }
+    });
+  });
+});
+</script>
