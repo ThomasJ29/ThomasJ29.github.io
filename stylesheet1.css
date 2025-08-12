@@ -146,8 +146,8 @@ footer p {
   background-color: var(--color-menu-bg);
   padding: 10px 0;
   position: relative;
-  border-radius: var(--radius-medium);  /* ✅ coins arrondis comme le container */
-  margin-bottom: 20px;                  /* ✅ espace sous le menu */
+  border-radius: var(--radius-medium); /* coins arrondis identiques au container */
+  margin-bottom: 20px; /* séparation avec le container suivant */
 }
 
 .menu-horizontal {
@@ -168,8 +168,8 @@ footer p {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #000; /* ✅ texte noir dans le menu */
-  font-size: 1.8rem; /* texte 2× plus gros */
+  color: #000; /* texte noir */
+  font-size: 1.8rem; /* 2× plus gros */
   transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
