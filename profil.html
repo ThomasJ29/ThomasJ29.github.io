@@ -90,7 +90,13 @@
     <div class="container">
         <section id="cv">
             <h2>Mon CV</h2>
-            <img src="CV.png" width="900" height="700"
+            <style>
+              section#cv img {
+                border-radius: var(--radius-medium);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                align-self: center;
+              }
+            <img src="CV.png" width="700" height="1000"
               alt="Curriculum Vitae de Jérémy Thomas"
               style="object-fit: cover" />
         </section>
