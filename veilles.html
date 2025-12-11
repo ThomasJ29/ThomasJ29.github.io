@@ -131,10 +131,58 @@
                 style="object-fit: cover"
               />
             <p><i>Exemple de suivi sur Linkedin</i></p>
-            <p>Le sujet de veille technologique que j’ai décidé de suivre principalement est :les cybermenaces boostées à l'IA. En effet, cette nouvelle technologie va permettre aux hackers d’améliorer leurs propres outils d’intrusion, de falsification, et toutes autres menaces qu’ils peuvent engendrer.</p>
+            <p>Le sujet de veille technologique que j’ai décidé de suivre principalement est: les cybermenaces boostées à l'IA. En effet, cette nouvelle technologie va permettre aux hackers d’améliorer leurs propres outils d’intrusion, de falsification, et toutes autres menaces qu’ils peuvent engendrer.</p>
             <p>Voici un tableau de suivi de veille sur ce sujet:</p>
             <p><a href="https://docs.google.com/spreadsheets/d/1fxJhc2GprRQvB_6n1B2piM3_Bo2rPkj9l4iIcx5zFEw/edit?gid=0#gid=0" > Tableau de veille</a></p>
-            
+            <p>Ce tableau est mis à jour régulièrement avec les nouvelles informations que je trouve sur le sujet.</p>
+            <p>Ces menaces IA ne sont pas inarrêtables, mais elles obligent à combiner hygiène de base, durcissement spécifique à l’IA et nouveaux outils de détection comportementale. Voici, menace par menace, ce qui peut être fait aujourd’hui ou à court terme.
+
+Code généré par IA trompeur
+Former les développeurs et utilisateurs à considérer toute sortie d’IA comme non fiable par défaut : revue de code systématique, tests unitaires, SAST/DAST obligatoires avant mise en production, même pour du « petit script ».
+
+Intégrer des garde‑fous dans les workflows : modèles IA bridés (pas d’accès direct à Internet ou à la prod), exécution en sandbox, scans de dépendances (SCA) pour détecter les paquets ou URLs ajoutés par l’IA.
+
+Mettre en place des politiques internes claires sur l’usage des LLM (ce qui peut être généré, ce qui doit être écrit à la main, exigences de revue croisée) et tracer l’origine du code (Git hooks, champs « generated-by-ai ») afin d’enquêter plus facilement en cas d’incident.
+
+Malware IA comme MalTerminal (GPT‑4 générant le payload)
+Renforcer la détection comportementale et EDR/XDR, puisque la charge utile varie à chaque exécution : surveillance des patterns (chiffrement massif de fichiers, connexions sortantes anormales, création de scripts temporaires, appel à API LLM depuis un binaire inconnu, etc.).​
+
+Bloquer ou filtrer les appels sortants vers les API d’IA depuis les postes utilisateurs et serveurs (proxy, DNS, pare‑feu applicatif) et appliquer le principe du moindre privilège réseau.​
+
+Utiliser la rétro‑ingénierie et le threat hunting spécifiques à ce type de malware : recherche d’artefacts liés aux SDK/API de LLM dans les exécutables, détection de prompts embarqués, règles YARA ciblant les schémas connus de MalTerminal et autres malwares « LLM‑assisted ».​
+
+Continuer à patcher les vulnérabilités classiques exploitées pour l’initial access, car l’IA n’est qu’un accélérateur sur des techniques déjà connues (phishing, macros, vulnérabilités type Follina, etc.).​
+
+Bots malveillants se faisant passer pour des agents IA (Radware)
+Mettre à jour les solutions anti‑bots vers des approches comportementales plutôt que basées sur l’user‑agent ou des signatures simples (analyse des modèles de login, vitesse de frappe, séquences de navigation, empreintes de navigateur).​
+
+Vérifier cryptographiquement les appels provenant d’agents IA officiels : authentification forte d’API, listes d’IP/ASN de confiance, mutual TLS, clés d’API tournantes, et validation du contexte (un « agent IA » ne devrait jamais initier un reset massif de mots de passe sans interaction utilisateur).​
+
+Renforcer la protection des comptes contre les ATO : MFA robuste (FIDO2), détection d’anomalies sur les connexions (pays, device, horaire), limitation des tentatives de login, scoring de risque en temps réel avec blocage adaptatif pour les opérations financières sensibles.​
+
+Surveiller spécifiquement les pics de trafic émanant de « faux » agents IA (nouveaux user‑agents, variations rapides d’IP cloud) et automatiser les contre‑mesures (CAPTCHA renforcé, challenges API, blocage dynamique).​
+
+Mesures clés pour ATO et fraudes (vue synthétique)
+Aspect défensif	Moyens actuels efficaces
+Authentification	MFA matériel, gestion des sessions et cookies durcie
+Détection des bots	Analyse comportementale et fingerprinting avancé ​
+Surveillance des comptes	Alertes sur connexions et transactions atypiques
+Protection applicative	WAF + règles spécifiques sur endpoints de login/API
+IA autonome détournée (ex. Claude Code jailbreaké)
+Durcir les modèles côté fournisseur et côté entreprise : politiques de sécurité IA, filtrage de prompts, détection de jailbreak (pattern de « role‑play », demandes de contournement de règles), limitation explicite des actions possibles (lecture seule, aucun accès direct à la prod ou à Internet).​
+
+Segmenter strictement l’architecture : exécuter les agents IA dans des environnements isolés avec accès minimal (réseaux dédiés, comptes techniques à privilèges limités, accès temporisé), et faire passer toute action destructive par une validation humaine (approval workflow).​
+
+Journaliser tout ce que fait l’agent IA : prompts, réponses, commandes exécutées, ressources accédées. Utiliser ces logs dans le SOC/SIEM pour créer des use‑cases spécifiques (ex : un agent d’audit qui lance un scan exhaustif sur des segments non prévus ou exfiltre des volumes importants de données).​
+
+Appliquer les mêmes principes que pour un pentester interne : charte d’engagement, périmètre défini, durée limitée, et comptes séparés pour les tâches d’audit afin de limiter l’impact si l’IA est détournée.​
+
+Défenses transverses face aux menaces IA
+Mettre en place une gouvernance IA de sécurité : registre des usages d’IA, cartographie des modèles utilisés (internes, SaaS), analyse de risque par cas d’usage, et revue régulière des prompts critiques.​
+
+Former les équipes SOC, dev, risk management et métiers aux spécificités de l’IA : compréhension des hallucinations, des jailbreaks, de la génération de code dynamique et des faux agents IA, pour adapter procédures d’incident response et playbooks.​
+
+Exploiter l’IA défensive : modèles pour corréler les signaux faibles (trafic anormal, comportements de bots, actions d’agents IA internes), assistance à la chasse aux menaces, et génération automatisée de règles de détection à partir de nouveaux IoC.</p>
           </section>
     </div>
     <footer>
