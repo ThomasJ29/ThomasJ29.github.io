@@ -136,39 +136,35 @@
             <p><a href="https://docs.google.com/spreadsheets/d/1fxJhc2GprRQvB_6n1B2piM3_Bo2rPkj9l4iIcx5zFEw/edit?gid=0#gid=0" > Tableau de veille</a></p>
             <p>Ce tableau est mis à jour régulièrement avec les nouvelles informations que je trouve sur le sujet.</p>
             <p>Ces menaces IA ne sont pas inarrêtables, mais elles obligent à combiner hygiène de base, durcissement spécifique à l’IA et nouveaux outils de détection comportementale. Voici, menace par menace, ce qui peut être fait aujourd’hui ou à court terme.</p>
-<p>Code généré par IA trompeur</p>
+            <p>Code généré par IA trompeur</p>
 
-<p>Former les développeurs et utilisateurs à considérer toute sortie d’IA comme non fiable par défaut : revue de code systématique, tests unitaires, SAST/DAST obligatoires avant mise en production, même pour du « petit script ».</p>
+            <p>Former les développeurs et utilisateurs à considérer toute sortie d’IA comme non fiable par défaut : revue de code systématique, tests unitaires, SAST/DAST obligatoires avant mise en production, même pour du « petit script ».</p>
 
-<p>Intégrer des garde‑fous dans les workflows : modèles IA bridés (pas d’accès direct à Internet ou à la prod), exécution en sandbox, scans de dépendances (SCA) pour détecter les paquets ou URLs ajoutés par l’IA.</p>
+            <p>Intégrer des garde‑fous dans les workflows : modèles IA bridés (pas d’accès direct à Internet ou à la prod), exécution en sandbox, scans de dépendances (SCA) pour détecter les paquets ou URLs ajoutés par l’IA.</p>
 
-<p>Mettre en place des politiques internes claires sur l’usage des LLM (ce qui peut être généré, ce qui doit être écrit à la main, exigences de revue croisée) et tracer l’origine du code (Git hooks, champs « generated-by-ai ») afin d’enquêter plus facilement en cas d’incident.</p>
+            <p>Mettre en place des politiques internes claires sur l’usage des LLM (ce qui peut être généré, ce qui doit être écrit à la main, exigences de revue croisée) et tracer l’origine du code (Git hooks, champs « generated-by-ai ») afin d’enquêter plus facilement en cas d’incident.</p>
 
-<p>Malware IA comme MalTerminal (GPT‑4 générant le payload)</p>
-<p>Renforcer la détection comportementale et EDR/XDR, puisque la charge utile varie à chaque exécution : surveillance des patterns (chiffrement massif de fichiers, connexions sortantes anormales, création de scripts temporaires, appel à API LLM depuis un binaire inconnu, etc.).​</p>
+            <p><b> IA comme MalTerminal (GPT‑4 générant le payload)</b></p>
+            <p>Renforcer la détection comportementale et EDR/XDR, puisque la charge utile varie à chaque exécution : surveillance des patterns (chiffrement massif de fichiers, connexions sortantes anormales, création de scripts temporaires, appel à API LLM depuis un binaire inconnu, etc.).​</p>
+            <p>Bloquer ou filtrer les appels sortants vers les API d’IA depuis les postes utilisateurs et serveurs (proxy, DNS, pare‑feu applicatif) et appliquer le principe du moindre privilège réseau.​</p>
+            <p>Utiliser la rétro‑ingénierie et le threat hunting spécifiques à ce type de malware : recherche d’artefacts liés aux SDK/API de LLM dans les exécutables, détection de prompts embarqués, règles YARA ciblant les schémas connus de MalTerminal et autres malwares « LLM‑assisted ».​</p>
+            <p>Continuer à patcher les vulnérabilités classiques exploitées pour l’initial access, car l’IA n’est qu’un accélérateur sur des techniques déjà connues (phishing, macros, vulnérabilités type Follina, etc.).​</p>
 
-<p>Bloquer ou filtrer les appels sortants vers les API d’IA depuis les postes utilisateurs et serveurs (proxy, DNS, pare‑feu applicatif) et appliquer le principe du moindre privilège réseau.​</p>
+            <p><b>Bots malveillants se faisant passer pour des agents IA (Radware)</b></p>
+            <p>Mettre à jour les solutions anti‑bots vers des approches comportementales plutôt que basées sur l’user‑agent ou des signatures simples (analyse des modèles de login, vitesse de frappe, séquences de navigation, empreintes de navigateur).​</p>
+            <p>Vérifier cryptographiquement les appels provenant d’agents IA officiels : authentification forte d’API, listes d’IP/ASN de confiance, mutual TLS, clés d’API tournantes, et validation du contexte (un « agent IA » ne devrait jamais initier un reset massif de mots de passe sans interaction utilisateur).​</p>
+            <p>Renforcer la protection des comptes contre les ATO : MFA robuste (FIDO2), détection d’anomalies sur les connexions (pays, device, horaire), limitation des tentatives de login, scoring de risque en temps réel avec blocage adaptatif pour les opérations financières sensibles.​</p>
+            <p>Surveiller spécifiquement les pics de trafic émanant de « faux » agents IA (nouveaux user‑agents, variations rapides d’IP cloud) et automatiser les contre‑mesures (CAPTCHA renforcé, challenges API, blocage dynamique).</p>​
 
-<p>Utiliser la rétro‑ingénierie et le threat hunting spécifiques à ce type de malware : recherche d’artefacts liés aux SDK/API de LLM dans les exécutables, détection de prompts embarqués, règles YARA ciblant les schémas connus de MalTerminal et autres malwares « LLM‑assisted ».​</p>
-
-<p>Continuer à patcher les vulnérabilités classiques exploitées pour l’initial access, car l’IA n’est qu’un accélérateur sur des techniques déjà connues (phishing, macros, vulnérabilités type Follina, etc.).​</p>
-
-<p>Bots malveillants se faisant passer pour des agents IA (Radware)</p>
-<p>Mettre à jour les solutions anti‑bots vers des approches comportementales plutôt que basées sur l’user‑agent ou des signatures simples (analyse des modèles de login, vitesse de frappe, séquences de navigation, empreintes de navigateur).​</p>
-
-<p>Vérifier cryptographiquement les appels provenant d’agents IA officiels : authentification forte d’API, listes d’IP/ASN de confiance, mutual TLS, clés d’API tournantes, et validation du contexte (un « agent IA » ne devrait jamais initier un reset massif de mots de passe sans interaction utilisateur).​</p>
-
-<p>Renforcer la protection des comptes contre les ATO : MFA robuste (FIDO2), détection d’anomalies sur les connexions (pays, device, horaire), limitation des tentatives de login, scoring de risque en temps réel avec blocage adaptatif pour les opérations financières sensibles.​</p>
-
-<p>Surveiller spécifiquement les pics de trafic émanant de « faux » agents IA (nouveaux user‑agents, variations rapides d’IP cloud) et automatiser les contre‑mesures (CAPTCHA renforcé, challenges API, blocage dynamique).</p>​
-
-<p>Mesures clés pour ATO et fraudes (vue synthétique)</p>
-<p>Aspect défensif	Moyens actuels efficaces</p>
-<p>Authentification	MFA matériel, gestion des sessions et cookies durcie</p>
-<p>Détection des bots	Analyse comportementale et fingerprinting avancé ​</p>
-<p>Surveillance des comptes	Alertes sur connexions et transactions atypiques</p>
-<p>Protection applicative	WAF + règles spécifiques sur endpoints de login/API</p>
-<p>IA autonome détournée (ex. Claude Code jailbreaké)</p>
+            <p><b>Mesures clés pour ATO et fraudes (vue synthétique)</b></p>
+<table>
+<colgroup><col> Aspect défensif	<col>Moyens actuels efficaces </colgroup>
+<colgroup><col> Authentification<col>MFA matériel, gestion des sessions et cookies durcie</colgroup>
+<colgroup><col>Détection des bots<col>Analyse comportementale et fingerprinting avancé </colgroup>
+<colgroup><col>Surveillance des comptes<col>	Alertes sur connexions et transactions atypiques</colgroup>
+<colgroup><col>Protection applicative<col>WAF + règles spécifiques sur endpoints de login/API</colgroup>
+</table>
+<p><b>IA autonome détournée (ex. Claude Code jailbreaké)</b></p>
 <p>Durcir les modèles côté fournisseur et côté entreprise : politiques de sécurité IA, filtrage de prompts, détection de jailbreak (pattern de « role‑play », demandes de contournement de règles), limitation explicite des actions possibles (lecture seule, aucun accès direct à la prod ou à Internet).​</p>
 
 <p>Segmenter strictement l’architecture : exécuter les agents IA dans des environnements isolés avec accès minimal (réseaux dédiés, comptes techniques à privilèges limités, accès temporisé), et faire passer toute action destructive par une validation humaine (approval workflow).</p>​
