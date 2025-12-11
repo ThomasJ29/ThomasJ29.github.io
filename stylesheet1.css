@@ -253,14 +253,6 @@ footer p {
   flex: 1;              /* chaque colonne prend 50% */
 }
 
-.gauche {
-  /* styles spécifiques si besoin */
-}
-
-.droite {
-  /* styles spécifiques si besoin */
-}
-
 
 .table {
     border-collapse: collapse;
