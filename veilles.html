@@ -165,6 +165,7 @@
                 <tr><th>Protection applicative</th><th>WAF + règles spécifiques sur endpoints de login/API</th></tr>
               </table>
             <p><b>IA autonome détournée (ex. Claude Code jailbreaké)</b></p>
+            <ul>
             <li>Durcir les modèles côté fournisseur et côté entreprise : politiques de sécurité IA, filtrage de prompts, détection de jailbreak (pattern de « role‑play », demandes de contournement de règles), limitation explicite des actions possibles (lecture seule, aucun accès direct à la prod ou à Internet).​</p>
             <li>Segmenter strictement l’architecture : exécuter les agents IA dans des environnements isolés avec accès minimal (réseaux dédiés, comptes techniques à privilèges limités, accès temporisé), et faire passer toute action destructive par une validation humaine (approval workflow).</p>​
             <li>Journaliser tout ce que fait l’agent IA : prompts, réponses, commandes exécutées, ressources accédées. Utiliser ces logs dans le SOC/SIEM pour créer des use‑cases spécifiques (ex : un agent d’audit qui lance un scan exhaustif sur des segments non prévus ou exfiltre des volumes importants de données).​</p>
@@ -173,7 +174,8 @@
             <li>Mettre en place une gouvernance IA de sécurité : registre des usages d’IA, cartographie des modèles utilisés (internes, SaaS), analyse de risque par cas d’usage, et revue régulière des prompts critiques.​</p>
             <li>Former les équipes SOC, dev, risk management et métiers aux spécificités de l’IA : compréhension des hallucinations, des jailbreaks, de la génération de code dynamique et des faux agents IA, pour adapter procédures d’incident response et playbooks.​</p>
             <li>Exploiter l’IA défensive : modèles pour corréler les signaux faibles (trafic anormal, comportements de bots, actions d’agents IA internes), assistance à la chasse aux menaces, et génération automatisée de règles de détection à partir de nouveaux IoC.</p>
-          </section>
+            </ul>
+            </section>
     </div>
     <footer>
         <a href="https://www.linkedin.com/in/jthom29/" class="social-button" title="LinkedIn" target="_blank" rel="noopener">
